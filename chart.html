@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="chart.css" />
+ </head>
+<body class="text-center" data-ng-app="chart">
+    <h1>Funnel Chart</h1>
+    <div class="container" data-ng-controller="chartController">
+                <h2>Standard Stages</h2>
+                <div class="row row-centered pos full-border bar" data-ng-style="barStyle($index);" data-ng-repeat="stage in stages"> 
+                        <div class="col col-center">{{stage}}</div>   
+                </div>
+
+            
+                <h2>Many Stages</h2>
+                <div class="row row-centered pos full-border bar" data-ng-style="barManyStyle($index);" data-ng-repeat="stage in manystages">
+                    <div class="col col-center">{{stage}}</div>
+                </div> 
+    </div>
+    
+       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="chart.js"></script>
+</body>
+
+</html>
